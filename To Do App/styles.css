@@ -1,0 +1,129 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', 'sans-serif';
+
+}
+
+#main-container{
+  /* background-color: linear-gradient(deg90, #a0522d, #663399 ); */
+  /* background-color: red; */
+  width: 100%;
+  min-width: 550px;
+  height: 100vh;
+  background: linear-gradient(135deg, #a2520b, #fb7100d3);
+  padding: 10px;
+  
+}
+
+#to-do-app{
+  width: 100%;
+  max-width: 540px;
+  min-height: 20vh;
+  background: #fff;
+  margin: 20vh auto;
+  padding: 40px 30px 50px;
+  border-radius: 10px;
+}
+
+h2{
+  color: seagreen;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 25%;
+  padding-left: 25px;
+}
+
+h2 img{
+  width: 30px;
+  margin-left: 10px;
+}
+
+input{
+  flex: 1;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  font-weight: 14px;
+  padding: 7px;
+  background: transparent;
+}
+
+button{
+  border: none;
+  outline: none;
+  padding: 7px 30px;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 30px;
+  background: seagreen;
+  cursor: pointer;
+}
+
+
+#input-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: peachpuff;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+
+#list-container{
+  align-content: space-between;
+  /* background-color: red; */
+}
+
+li{
+  list-style: none;
+  font-size: 15px;
+  padding: 12px 50px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative; /* Added this line to make ::before work */
+}
+
+li::before{
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 10px;
+  left: 8px;
+}
+
+li.checked{
+  color: #500;
+  text-decoration: line-through;
+}
+
+li.checked::before{
+  content: '';
+  background-image: url(images/checked.png);
+}
+
+span{
+position: absolute;
+right: 0;
+top: 5px;
+width: 40px;
+height: 40px;
+font-size: 22px;
+color: #ff5945;
+line-height: 40px;
+text-align: center;
+border-radius: 50%; /*To make it a circle shape*/
+}
+
+span:hover{
+  background: #edeef0;
+}
